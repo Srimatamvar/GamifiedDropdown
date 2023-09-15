@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamified Personal Info Page</title>
+    <link rel="stylesheet" href="about_me.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile</h1>
+      <div class="profile-info">
+        <img src="avatar.jpg" alt="My Avatar" class="avatar" />
+        <div class="info">
+          <h2>Srimatamvar</h2>
+          <p>Age: 21</p>
+          <p>Location: Bangalore</p>
+          <p>Hobbies: <span id="hobbies">Coding, Gaming, Traveling</span></p>
+          <button id="editHobbies">Edit Hobbies</button>
+        </div>
+      </div>
+      <div id="hobbiesForm" style="display: none">
+        <label for="newHobbies">New Hobbies:</label>
+        <input type="text" id="newHobbies" placeholder="Enter your hobbies" />
+        <button id="saveHobbies">Save</button>
+      </div>
+    </div>
+    <script src="about_me.js"></script>
+  </body>
+</html>

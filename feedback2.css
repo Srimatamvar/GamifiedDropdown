@@ -1,0 +1,75 @@
+body {
+  font-family: "Ink Free", sans-serif;
+  background-color: rgb(19, 17, 17);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-family: "Ink Free", sans-serif;
+  color: #333;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Ink Free", sans-serif;
+  margin-top: 5px;
+}
+
+.emoji-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.emoji-rating label {
+  text-align: center;
+  cursor: pointer;
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Ink Free", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

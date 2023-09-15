@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="questionnaire.css" />
+    <title>Healthcare Gamified Survey</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Healthcare Gamified Survey</h1>
+      <form id="surveyForm">
+        <div class="question">
+          <p>1. Do you exercise regularly?</p>
+          <label> <input type="radio" name="q1" value="1" /> Yes </label>
+          <label> <input type="radio" name="q1" value="0" /> No </label>
+        </div>
+
+        <div class="question">
+          <p>Do you consume sugary beverages often?</p>
+          <label> <input type="radio" name="q2" value="0" /> Yes </label>
+          <label> <input type="radio" name="q2" value="1" /> No </label>
+          <!-- Additional input for quantity when 'Yes' is selected -->
+          <div class="quantity-input" style="display: none">
+            <p>If yes, how many per week?</p>
+            <input type="number" name="sugary_beverages_quantity" min="0" />
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. How many hours of sleep do you get on average per night?</p>
+          <input type="number" name="q3" min="1" max="12" step="0.5" />
+        </div>
+
+        <div class="question">
+          <p>4. Are you married?</p>
+          <label> <input type="radio" name="q4" value="0" /> Married </label>
+          <label> <input type="radio" name="q4" value="1" /> Divorce </label>
+          <label> <input type="radio" name="q4" value="2" /> Single </label>
+          <label>
+            <input type="radio" name="q4" value="3" /> Significant patnership
+          </label>
+          <label> <input type="radio" name="q4" value="4" /> Widowed </label>
+        </div>
+
+        <div class="question">
+          <p>
+            5. Would you like to talk to the doctor about any of the following
+            therapies?
+          </p>
+          <label>
+            <input type="checkbox" name="q1" value="0" /> Acupuncture
+          </label>
+          <label>
+            <input type="checkbox" name="q2" value="1" /> Nutrition/Weight
+            Management
+          </label>
+          <label>
+            <input type="checkbox" name="q3" value="2" /> IV nutrition
+          </label>
+          <label>
+            <input type="checkbox" name="q4" value="3" /> Homeopathy
+          </label>
+          <label>
+            <input type="checkbox" name="q5" value="4" /> Myotherapy/Bodywork
+          </label>
+          <label>
+            <input type="checkbox" name="q6" value="4" /> Herbal Medicine
+          </label>
+        </div>
+
+        <div class="question">
+          <p>6. Have you had your cholesterol checked?</p>
+          <label> <input type="radio" name="q2" value="0" /> Yes </label>
+          <label> <input type="radio" name="q2" value="1" /> No </label>
+        </div>
+
+        <div class="question">
+          <p>7. What is your Weight?</p>
+          <input type="number" name="q7" min="10" max="200" step="0.5" />
+        </div>
+
+        <div class="question">
+          <p>8. What is your Height?</p>
+          <input type="number" name="q8" min="10" max="200" step="0.5" />
+        </div>
+
+        <div class="question">
+          <p>9. How much glass of water do you drink daily?</p>
+          <input type="number" name="q9" min="0" max="20" step="1" />
+        </div>
+
+        <div class="question">
+          <p>What is your phone number?</p>
+          <input type="tel" name="phone_number" pattern="[0-9]*" required />
+          <p>(Please enter digits only)</p>
+        </div>
+
+        <div class="question">
+          <p>Email Address:</p>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+
+        <script>
+          document
+            .getElementById("surveyForm")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              // Your code to process the form data goes here
+
+              // Reset the form fields after submission
+              this.reset();
+            });
+          // JavaScript to show/hide the quantity input based on the 'Yes' or 'No' selection
+          const sugaryBeveragesInput =
+            document.querySelector('input[name="q2"]');
+          const quantityInput = document.querySelector(".quantity-input");
+
+          sugaryBeveragesInput.addEventListener("change", function () {
+            if (this.value === "0") {
+              quantityInput.style.display = "block";
+            } else {
+              quantityInput.style.display = "none";
+            }
+          });
+        </script>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="questionnaire.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ink+Free&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="feedback2.css" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Feedback Form</h1>
+      <form id="feedbackForm">
+        <div class="question">
+          <p>Name:</p>
+          <input type="text" name="name" required />
+        </div>
+
+        <div class="question">
+          <p>Email:</p>
+          <input type="email" name="email" required />
+        </div>
+
+        <div class="question">
+          <p>How was your experience today?</p>
+          <div class="emoji-rating">
+            <label>
+              <input type="radio" name="rating" value="😃" />
+              <span class="emoji">😃</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="😊" />
+              <span class="emoji">😊</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="😐" />
+              <span class="emoji">😐</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="😞" />
+              <span class="emoji">😞</span>
+            </label>
+            <label>
+              <input type="radio" name="rating" value="😢" />
+              <span class="emoji">😢</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>Any additional comments?</p>
+          <textarea name="comments" rows="4"></textarea>
+        </div>
+
+        <div class="question">
+          <label>
+            <input type="checkbox" name="consent" required />
+            I accept the<a
+              href="C:\Users\Sri\Desktop\Sri_SuvidhaProject/tnc.html"
+            >
+              terms and conditions</a
+            >
+          </label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="feedback2.css"></script>
+  </body>
+</html>
